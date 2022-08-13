@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <WebView
+        android:id="@+id/poke_back"
+        android:layout_width="128dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/poke_front"
+        app:layout_constraintTop_toBottomOf="@+id/back_default" />
+
+    <TextView
+        android:id="@+id/back_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Back default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/front_default"
+        app:layout_constraintTop_toBottomOf="@+id/text_name" />
+
+    <WebView
+        android:id="@+id/poke_front"
+        android:layout_width="128dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/poke_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/front_default" />
+
+    <TextView
+        android:id="@+id/front_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Front default"
+        app:layout_constraintEnd_toStartOf="@id/back_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_name" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_random" />
+
+    <Button
+        android:id="@+id/btn_random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Who's that Pokémon?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lv_moves"
+        android:layout_width="180dp"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lv_stats"
+        app:layout_constraintTop_toBottomOf="@id/moves" />
+
+    <TextView
+        android:id="@+id/moves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="Moves"
+        app:layout_constraintBottom_toTopOf="@+id/lv_moves"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/stats"
+        app:layout_constraintTop_toBottomOf="@+id/poke_back"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <ListView
+        android:id="@+id/lv_stats"
+        android:layout_width="180dp"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toStartOf="@+id/lv_moves"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stats" />
+
+    <TextView
+        android:id="@+id/stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stats"
+        app:layout_constraintBottom_toTopOf="@+id/lv_stats"
+        app:layout_constraintEnd_toStartOf="@+id/moves"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poke_front"
+        app:layout_constraintVertical_bias="0.49" />
+
+    <TextView
+        android:id="@+id/ime_prezime_datum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dominik Lastovčić\n 14.8.2022"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_stats" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
